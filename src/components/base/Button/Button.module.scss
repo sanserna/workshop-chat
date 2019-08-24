@@ -1,0 +1,30 @@
+@import '~design/index';
+
+.button {
+  border: 1px solid $color-button-border;
+  border-radius: $size-button-border-radius;
+  padding: $size-button-padding;
+  color: $color-button-text-color;
+  background: $color-button-bg;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: 0;
+  vertical-align: middle;
+  transition: $duration-transitions-base ease-in-out;
+
+  &:disabled {
+    cursor: not-allowed;
+    background: $color-button-bg-disabled;
+    border-color: $color-button-bg-disabled;
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):hover {
+    color: $color-button-text-color-active;
+    background-color: $color-button-bg-active;
+  }
+}
