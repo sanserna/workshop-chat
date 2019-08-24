@@ -1,0 +1,11 @@
+@import '~design/index';
+
+.chat-body {
+  height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background: map-get($colors, 'white');
+  overflow-y: scroll;
+  padding: $size-chat-body-padding;
+}

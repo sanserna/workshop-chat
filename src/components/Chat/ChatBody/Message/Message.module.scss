@@ -1,0 +1,23 @@
+@import '~design/index';
+
+.message {
+  border-radius: $size-chat-message-border-radius;
+  background: $color-chat-message-bg;
+  padding: $size-chat-message-padding;
+  max-width: $size-chat-message-max-width;
+
+  &:not(:last-child) {
+    margin-bottom: $size-space-1x;
+  }
+
+  &--own {
+    background: $color-chat-message-own-bg;
+    color: map-get($colors, 'white');
+    align-self: flex-end;
+  }
+
+  &__user-name {
+    display: block;
+    font-weight: 700;
+  }
+}
