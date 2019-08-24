@@ -1,0 +1,43 @@
+// -------------------
+// #COMMON
+// -------------------
+$size-space-1x: 0.625rem;
+
+// -------------------
+// #CONTENT
+// -------------------
+$size-app-content-height: 100vh;
+
+// -------------------
+// #CHAT
+// -------------------
+$size-chat-width: 500px;
+
+// CHAT BODY
+$size-chat-body-padding-vertical: 1rem;
+$size-chat-body-padding-horizontal: 1rem;
+$size-chat-body-padding: $size-chat-body-padding-vertical
+  $size-chat-body-padding-horizontal;
+
+// CHAT MESSAGE
+$size-chat-message-border-radius: 3px;
+$size-chat-message-max-width: 400px;
+$size-chat-message-padding-vertical: 0.5rem;
+$size-chat-message-padding-horizontal: 0.5rem;
+$size-chat-message-padding: $size-chat-message-padding-vertical
+  $size-chat-message-padding-horizontal;
+
+// CHAT MESSAGE INPUT
+$size-chat-message-input-padding-vertical: 0.5rem;
+$size-chat-message-input-padding-horizontal: 0.5rem;
+$size-chat-message-input-padding: $size-chat-message-input-padding-vertical
+  $size-chat-message-input-padding-horizontal;
+
+// -------------------
+// #BUTTON
+// -------------------
+$size-button-border-radius: 0.25rem;
+$size-button-padding-vertical: 0.5rem;
+$size-button-padding-horizontal: 0.75rem;
+$size-button-padding: $size-button-padding-vertical
+  $size-button-padding-horizontal;

@@ -1,0 +1,20 @@
+// Vendors imports
+@import '~normalize.css/normalize.css';
+
+// Desing system
+@import '~design/index';
+
+// Base Imports
+@import './base/helpers';
+@import './base/forms';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $default-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

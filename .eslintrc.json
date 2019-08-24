@@ -6,7 +6,7 @@
     }
   },
   "plugins": ["jsx-a11y", "react", "react-hooks"],
-  "extends": ["airbnb", "eslint:recommended"],
+  "extends": ["airbnb", "prettier", "prettier/react", "eslint:recommended"],
   "env": {
     "browser": true,
     "es6": true
