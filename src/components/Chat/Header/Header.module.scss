@@ -1,0 +1,14 @@
+@import '~design/index';
+
+.header {
+  background: $color-main-header-bg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $size-space-1x;
+  border: 1px solid $color-separator;
+
+  &__title {
+    margin: 0;
+  }
+}
