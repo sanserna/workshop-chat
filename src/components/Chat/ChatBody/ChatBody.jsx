@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { useQuery } from '@apollo/react-hooks';
+import React, { useContext, useEffect, useRef } from 'react';
+import { useQuery, useSubscription } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
 import { Store } from 'Store';
@@ -16,15 +16,35 @@ const GET_CHATS = gql`
     }
   }
 `;
+const CHATS_SUBSCRIPTION = gql`
+  subscription OnNewMessage {
+    messageSent {
+      id
+      from
+      fromName
+      message
+    }
+  }
+`;
 
 function ChatBody() {
   const { state } = useContext(Store);
   const chatBodyClassNames = [styles['chat-body'], 'elevation-box-inset-right'];
   const { data, loading } = useQuery(GET_CHATS);
+  const { data: subscriptionData } = useSubscription(CHATS_SUBSCRIPTION);
   const chatList = data.chats;
+  const elementRef = useRef(null);
+
+  if (subscriptionData) {
+    chatList.push(subscriptionData.messageSent);
+  }
+
+  useEffect(() => {
+    elementRef.current.scrollTop = elementRef.current.scrollHeight;
+  }, [data, subscriptionData]);
 
   return (
-    <section className={chatBodyClassNames.join(' ')}>
+    <section className={chatBodyClassNames.join(' ')} ref={elementRef}>
       {loading
         ? 'Cargando mensajes...'
         : chatList.map(chat => (
