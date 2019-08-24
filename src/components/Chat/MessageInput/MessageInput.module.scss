@@ -1,0 +1,13 @@
+@import '~design/index';
+
+.message-input {
+  padding: $size-chat-message-input-padding;
+  background: $color-chat-message-input-bg;
+  border: 1px solid $color-separator;
+  display: flex;
+  align-items: center;
+}
+
+.text-input {
+  margin-right: $size-space-1x;
+}
